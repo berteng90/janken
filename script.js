@@ -4,7 +4,6 @@ console.log(playRound(playerSelection, computerSelection));
 console.log(computerSelection);
 
 
-
 function computerPlay() {
     const computerHand = ["rock", "paper", "scissors"];
     let computerCurrentHand = computerHand[Math.floor(Math.random() * computerHand.length)];
@@ -13,47 +12,51 @@ function computerPlay() {
 }
 
 function playRound(playerSelection, computerSelection) {
+    let playerScore = 0;
+    let computerScore = 0;
     for (i = 1; i <= 5; i++) {
-        console.log(computerSelection);
-        let playerScore = 0;
-        let computerScore = 0;
+        console.log(`ROUND ${i}`);
         let playerHand = window.prompt("Enter your Hand!!!");
-        console.log(`Player score: ${playerScore}`);
-        console.log(`Computer score: ${computerScore}`);
-        computerPlay();
-        switch (playerHand) {
-            case playerHand === 'rock' && computerSelection === 'paper':
-                computerScore++;
-                windows.prompt("Computer Won!!!");
-                break;
-            case playerHand === 'rock' && computerSelection === 'scissors':
-                playerScore++;
-                windows.prompt("Player Won!!!");
-                break;
-            case playerHand === 'scissors' && computerSelection === 'paper':
-                playerScore++;
-                windows.prompt("Player Won!!!");
-                break;
-            case playerHand === 'scissors' && computerSelection === 'rock':
-                computerScore++;
-                windows.prompt("Computer Won!!!");
-                break;
-            case playerHand === 'paper' && computerSelection === 'rock':
-                playerScore++;
-                windows.prompt("Player Won!!!");
-                break;
-            case playerHand === 'paper' && computerSelection === 'scissors':
-                computerScore++;
-                windows.prompt("Computer Won!!!");
-                break;
-            case playerHand === computerSelection:
-                windows.prompt("Its a Tie!");
+        if (playerHand === 'rock' && computerSelection === 'paper') {
+            computerScore++;
+            window.alert("Computer Won!!!");
+            console.log(`Player score: ${playerScore}`);
+            console.log(`Computer score: ${computerScore}`);
+        } else if (playerHand === 'rock' && computerSelection === 'scissors') {
+            playerScore++;
+            window.alert("Player Won!!!");
+            console.log(`Player score: ${playerScore}`);
+            console.log(`Computer score: ${computerScore}`);
+        } else if (playerHand === 'scissors' && computerSelection === 'paper') {
+            playerScore++;
+            window.alert("Player Won!!!");
+            console.log(`Player score: ${playerScore}`);
+            console.log(`Computer score: ${computerScore}`);
+        } else if (playerHand === 'scissors' && computerSelection === 'rock') {
+            computerScore++;
+            window.alert("Computer Won!!!");
+            console.log(`Player score: ${playerScore}`);
+            console.log(`Computer score: ${computerScore}`);
+        } else if (playerHand === 'paper' && computerSelection === 'rock') {
+            playerScore++;
+            window.alert("Player Won!!!");
+            console.log(`Player score: ${playerScore}`);
+            console.log(`Computer score: ${computerScore}`);
+        } else if (playerHand === 'paper' && computerSelection === 'scissors') {
+            computerScore++;
+            window.alert("Computer Won!!!");
+            console.log(`Player score: ${playerScore}`);
+            console.log(`Computer score: ${computerScore}`);
+        } else if (playerHand === computerSelection) {
+            window.alert("Its a Tie!");
+            console.log(`Player score: ${playerScore}`);
+            console.log(`Computer score: ${computerScore}`);
         }
 
     }
     (playerScore > computerScore) ?
-        windows.prompt("Player Won! Congratulations") :
-        windows.prompt("Computer Won! You Suck!");
+        window.alert("Player Won! Congratulations") :
+        window.alert("Computer Won! You Suck!");
 
 }
 
