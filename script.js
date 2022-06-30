@@ -3,6 +3,8 @@ const computerSelection = computerPlay();
 console.log(playRound(playerSelection, computerSelection));
 console.log(computerSelection);
 
+
+
 //Generate random Computer Hand
 function computerPlay() {
     const computerHand = ["rock", "paper", "scissors"];
@@ -11,6 +13,7 @@ function computerPlay() {
 }
 
 function playRound(playerSelection, computerSelection) {
+
     let playerScore = 0;
     let computerScore = 0;
     //Loops 5 times to simulate 5 rounds
