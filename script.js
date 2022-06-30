@@ -3,20 +3,20 @@ const computerSelection = computerPlay();
 console.log(playRound(playerSelection, computerSelection));
 console.log(computerSelection);
 
-
+//Generate random Computer Hand
 function computerPlay() {
     const computerHand = ["rock", "paper", "scissors"];
     let computerCurrentHand = computerHand[Math.floor(Math.random() * computerHand.length)];
     return (computerCurrentHand);
-
 }
 
 function playRound(playerSelection, computerSelection) {
     let playerScore = 0;
     let computerScore = 0;
+    //Loops 5 times to simulate 5 rounds
     for (i = 1; i <= 5; i++) {
         console.log(`ROUND ${i}`);
-        let playerHand = window.prompt("Enter your Hand!!!");
+        // let playerHand = window.prompt("Enter your Hand!!!");
         if (playerHand === 'rock' && computerSelection === 'paper') {
             computerScore++;
             window.alert("Computer Won!!!");
@@ -52,14 +52,18 @@ function playRound(playerSelection, computerSelection) {
             console.log(`Player score: ${playerScore}`);
             console.log(`Computer score: ${computerScore}`);
         }
-
     }
+    //Tallies Score
     (playerScore > computerScore) ?
-        window.alert("Player Won! Congratulations") :
-        window.alert("Computer Won! You Suck!");
-
+        window.alert(`Player Won with ${playerScore} points! Congratulations`) :
+        window.alert(`Computer Won with ${computerScore} points.! You Suck!`);
 }
-
 function game() {
     playRound();
 }
+
+
+
+
+
+
