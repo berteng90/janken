@@ -1,64 +1,61 @@
-const playerSelection = 'rock';
+const playerSelection = playerPlay();
 const computerSelection = computerPlay();
 console.log(playRound(playerSelection, computerSelection));
 console.log(computerSelection);
 
+function playerPlay() {
+    let selectHand = document.querySelectorAll('#selection li');
+    selectHand.addEventListener('click', (e) => {
+        let playerHand = selectHand.id;
+        return (playerHand);
 
+    })
+
+}
+
+//Generate random Computer Hand
 function computerPlay() {
     const computerHand = ["rock", "paper", "scissors"];
     let computerCurrentHand = computerHand[Math.floor(Math.random() * computerHand.length)];
     return (computerCurrentHand);
-
 }
 
 function playRound(playerSelection, computerSelection) {
     let playerScore = 0;
     let computerScore = 0;
+    //Loops 5 times to simulate 5 rounds
     for (i = 1; i <= 5; i++) {
-        console.log(`ROUND ${i}`);
-        let playerHand = window.prompt("Enter your Hand!!!");
-        if (playerHand === 'rock' && computerSelection === 'paper') {
+
+        if (playerSelection === 'rock' && computerSelection === 'paper') {
             computerScore++;
-            window.alert("Computer Won!!!");
-            console.log(`Player score: ${playerScore}`);
-            console.log(`Computer score: ${computerScore}`);
-        } else if (playerHand === 'rock' && computerSelection === 'scissors') {
+
+        } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
             playerScore++;
-            window.alert("Player Won!!!");
-            console.log(`Player score: ${playerScore}`);
-            console.log(`Computer score: ${computerScore}`);
-        } else if (playerHand === 'scissors' && computerSelection === 'paper') {
+
+        } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
             playerScore++;
-            window.alert("Player Won!!!");
-            console.log(`Player score: ${playerScore}`);
-            console.log(`Computer score: ${computerScore}`);
-        } else if (playerHand === 'scissors' && computerSelection === 'rock') {
+
+        } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
             computerScore++;
-            window.alert("Computer Won!!!");
-            console.log(`Player score: ${playerScore}`);
-            console.log(`Computer score: ${computerScore}`);
-        } else if (playerHand === 'paper' && computerSelection === 'rock') {
+
+        } else if (playerSelection === 'paper' && computerSelection === 'rock') {
             playerScore++;
-            window.alert("Player Won!!!");
-            console.log(`Player score: ${playerScore}`);
-            console.log(`Computer score: ${computerScore}`);
-        } else if (playerHand === 'paper' && computerSelection === 'scissors') {
+
+        } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
             computerScore++;
-            window.alert("Computer Won!!!");
-            console.log(`Player score: ${playerScore}`);
-            console.log(`Computer score: ${computerScore}`);
-        } else if (playerHand === computerSelection) {
-            window.alert("Its a Tie!");
-            console.log(`Player score: ${playerScore}`);
-            console.log(`Computer score: ${computerScore}`);
+
+        } else if (playerSelection === computerSelection) {
+
+        } else {
+            //Tallies Score
+            // (playerScore > computerScore) ?
+            //     window.alert(`Player Won with ${playerScore} points! Congratulations`) :
+            //     window.alert(`Computer Won with ${computerScore} points.! You Suck!`);
         }
 
     }
-    (playerScore > computerScore) ?
-        window.alert("Player Won! Congratulations") :
-        window.alert("Computer Won! You Suck!");
-
 }
+
 
 function game() {
     playRound();
