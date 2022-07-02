@@ -2,9 +2,29 @@ const playerSelection = playerPlay();
 const computerSelection = computerPlay();
 
 
-function playerPlay(button_id) {
-   let playerHand=button_id;  
-   return (playerHand);
+
+function playerPlay() {
+   let handOne=document.getElementById('rock');
+   let handTwo=document.getElementById('paper');
+   let handThree=document.getElementById('scissors');
+
+   if (handOne.onclick, ()=>{
+   }){
+    return 'rock';
+   }else if (handTwo.onclick,()=>{
+
+   }){
+    return 'paper';  
+   }else if (handThree.onclick,()=>{
+
+    }){
+    return 'scissors';  
+    }
+    else{
+
+
+    }
+
 }
 
 //Generate random Computer Hand
@@ -14,40 +34,44 @@ function computerPlay() {
     return (computerCurrentHand);
 }
 
+//Play a Round of Rock Paper Scissors
 function playRound(playerSelection, computerSelection) {
-    let playerScore = 0;
-    let computerScore = 0;
-    //Loops 5 times to simulate 5 rounds
-    for (i = 1; i <= 5; i++) {
-            if (playerSelection === 'rock' && computerSelection === 'paper') {
-                computerScore++;
-                
     
-            } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
-                playerScore++;
-    
-            } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
-                playerScore++;
-    
-            } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
-                computerScore++;
-    
-            } else if (playerSelection === 'paper' && computerSelection === 'rock') {
-                playerScore++;
-    
-            } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
-                computerScore++;
-    
-            } else if (playerSelection === computerSelection) {
-    
-            } else {
-                //Tallies Score
-                // (playerScore > computerScore) ?
-                //     window.alert(`Player Won with ${playerScore} points! Congratulations`) :
-                //     window.alert(`Computer Won with ${computerScore} points.! You Suck!`);
-            }
+    const playerScore = 0;
+    const computerScore = 0;
+    let computer=document.getElementById('computer').textContent;
+    let player=document.getElementById('player').textContent;
+        if (playerSelection === 'rock' && computerSelection === 'paper') {
+            computerScore++;
+            computer.textContent=`Computer : ${computerScore}`;
+
+
+
+        } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
+            playerScore++;
+
+        } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
+            playerScore++;
+
+        } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
+            computerScore++;
+
+        } else if (playerSelection === 'paper' && computerSelection === 'rock') {
+            playerScore++;
+
+        } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
+            computerScore++;
+
+        } else if (playerSelection === computerSelection) {
+
+        } else {
+            //Tallies Score
+            // (playerScore > computerScore) ?
+            //     window.alert(`Player Won with ${playerScore} points! Congratulations`) :
+            //     window.alert(`Computer Won with ${computerScore} points.! You Suck!`);
+        } 
+            
     }
-}
 
 
 function game() {
