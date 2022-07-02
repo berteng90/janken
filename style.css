@@ -94,18 +94,31 @@ li {
     list-style: none;
 }
 
-li:hover {
-    /* cursor: pointer; */
+button:hover {
+    cursor: pointer;
 }
 
-img {
+ul img {
+    width: 100px;
+    height: 100px;
+    padding: 0 0.5rem;
+}
+
+.versus img{
     width: 125px;
     height: 125px;
-    padding: 0 1rem;
+    padding: 0 3rem;
+
 }
 
-img.hands:hover {
-    opacity: 60%;
+button{
+    border: none;
+    margin: 0;
+    padding: 0;    
+}
+
+button:hover {
+    opacity: 70%;
 }
 
 .player,
