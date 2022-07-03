@@ -3,6 +3,7 @@
     src: url(./fonts/MochiyPopOne-Regular.ttf);
 }
 
+
 body {
     font-family: 'MochiyPopOne';
     text-shadow: 1px 3px white;
@@ -29,7 +30,7 @@ body {
     width: 100%;
 }
 
-.round {
+#round {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,7 +70,7 @@ h1 {
 h2 {
     margin: 0;
     padding: 0;
-    padding-top: 8rem;
+    padding-top: 0;
 }
 
 h3 {
@@ -79,42 +80,51 @@ h3 {
 }
 
 h4 {
-    margin-right:4.5rem;
+    margin-right: 4.5rem;
     margin-left: 6rem;
 }
 
-ul {
+h5 {
+    margin-right: 0;
+    margin-left: 0;
+    visibility: hidden;
+}
+
+#buttons {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
 }
 
-li {
-    text-decoration: none;
-    list-style: none;
+.info {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
 }
+
 
 button:hover {
     cursor: pointer;
 }
 
-ul img {
+#buttons img {
     width: 80px;
     height: 80px;
     padding: 0 0.5rem;
 }
 
-.versus img{
+.versus img {
     width: 120px;
     height: 120px;
-    padding: 0 3rem;
+    padding: 0 1rem;
 
 }
 
-button{
+button {
     border: none;
     margin: 0;
-    padding: 0;    
+    padding: 0;
 }
 
 button:hover {
@@ -124,4 +134,9 @@ button:hover {
 .player,
 .computer {
     padding: 0;
+}
+
+#info-graphic {
+    width: 80px;
+    height: 80px;
 }

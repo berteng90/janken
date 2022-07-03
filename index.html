@@ -14,13 +14,16 @@
     <div class="header">
         <h1>Janken</h1>
     </div>
-    <div class="round">ROUND ONE!</div>
+    <div id="round">ROUND ONE!</div>
     <div class="interface">
         <div class="interface-main">
             <div class="versus">
-                <img src="./icons/questionmark.png" class="player">
-                <h2>VS</h2>
-                <img src="./icons/questionmark.png" class="computer">
+                <img id='player img' src="./icons/questionmark.png">
+                <div class="info">
+                    <h5 id="info-result"><img id="info-graphic" src="./icons/left.png"></h5>
+                    <h2>VS</h2>
+                </div>
+                <img id='computer img' src="./icons/questionmark.png">
             </div>
             <div class="user">
                 <h4 id="player">Player : 0</h4>
@@ -28,11 +31,11 @@
             </div>
             <div class="menu">
                 <h3>CHOOSE YOUR HAND!</h3>
-                <ul id="selection">
-                    <li><button id="rock" onclick="playerPlay()"><img class="hands" src="./icons/rock.png"></button></li>
-                    <li><button id="paper" onclick="playerPlay()"><img class="hands" src="./icons/paper.png"></button></li>
-                    <li><button id="scissors" onclick="playerPlay()"><img class="hands" src="./icons/scissors.png"></button></li>
-                </ul>
+                <div id='buttons'>
+                    <button id="rock"><img class="hands" src="./icons/rock.png"></button>
+                    <button id="paper"><img class="hands" src="./icons/paper.png"></button>
+                    <button id="scissors"><img class="hands" src="./icons/scissors.png"></button>
+                </div>
             </div>
         </div>
     </div>
